@@ -14,8 +14,8 @@
 
 
 ## on my list
-[ ] write a converter, which converts old Web 1 webstyles to CSS and the new WebstyleExtended class.
-[ ] create subclasses of each control, where the WebStyleHandler is already included, so it is easier to apply WebStyles.
+- [ ] write a converter, which converts old Web 1 webstyles to CSS and the new WebstyleExtended class.
+- [ ] create subclasses of each control, where the WebStyleHandler is already included, so it is easier to apply WebStyles.
 
 ## contribute
 have Ideas to improve these things? come and join me! maybe we can build a little package to make the convertion of Web1->Web2 a bit easier.
