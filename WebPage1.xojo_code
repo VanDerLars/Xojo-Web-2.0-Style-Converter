@@ -38,7 +38,7 @@ Begin WebPage WebPage1
       Hint            =   ""
       Index           =   -2147483648
       Indicator       =   ""
-      Left            =   448
+      Left            =   217
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -50,10 +50,9 @@ Begin WebPage WebPage1
       ReadOnly        =   False
       Scope           =   2
       TabIndex        =   1
-      TabStop         =   True
       TextAlignment   =   "0"
       Tooltip         =   ""
-      Top             =   20
+      Top             =   453
       Value           =   "This is an example Text to show you how a style is applied and removed."
       Visible         =   True
       Width           =   364
@@ -63,9 +62,7 @@ Begin WebPage WebPage1
       Left            =   0.0
       LockedInPosition=   False
       Scope           =   0
-      TabIndex        =   "4"
-      TabStop         =   True
-      Top             =   136.0
+      Top             =   0.0
    End
    Begin WebButton Button1
       AllowAutoDisable=   False
@@ -77,7 +74,7 @@ Begin WebPage WebPage1
       Height          =   38
       Index           =   -2147483648
       Indicator       =   "3"
-      Left            =   634
+      Left            =   589
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -87,9 +84,8 @@ Begin WebPage WebPage1
       LockVertical    =   False
       Scope           =   0
       TabIndex        =   5
-      TabStop         =   True
       Tooltip         =   ""
-      Top             =   155
+      Top             =   346
       Visible         =   True
       Width           =   178
    End
@@ -103,7 +99,7 @@ Begin WebPage WebPage1
       Height          =   38
       Index           =   -2147483648
       Indicator       =   "3"
-      Left            =   448
+      Left            =   403
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -111,12 +107,10 @@ Begin WebPage WebPage1
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
-      PanelIndex      =   "0"
       Scope           =   0
       TabIndex        =   5
-      TabStop         =   True
       Tooltip         =   ""
-      Top             =   155
+      Top             =   346
       Visible         =   True
       Width           =   178
    End
@@ -130,7 +124,7 @@ Begin WebPage WebPage1
       Height          =   38
       Index           =   -2147483648
       Indicator       =   "4"
-      Left            =   634
+      Left            =   589
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -138,12 +132,10 @@ Begin WebPage WebPage1
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
-      PanelIndex      =   "0"
       Scope           =   0
       TabIndex        =   5
-      TabStop         =   True
       Tooltip         =   ""
-      Top             =   201
+      Top             =   392
       Visible         =   True
       Width           =   178
    End
@@ -157,7 +149,7 @@ Begin WebPage WebPage1
       Height          =   38
       Index           =   -2147483648
       Indicator       =   "4"
-      Left            =   448
+      Left            =   403
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -165,12 +157,10 @@ Begin WebPage WebPage1
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
-      PanelIndex      =   "0"
       Scope           =   0
       TabIndex        =   5
-      TabStop         =   True
       Tooltip         =   ""
-      Top             =   201
+      Top             =   392
       Visible         =   True
       Width           =   178
    End
@@ -184,7 +174,7 @@ Begin WebPage WebPage1
       Height          =   38
       Index           =   -2147483648
       Indicator       =   "1"
-      Left            =   448
+      Left            =   20
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -194,9 +184,8 @@ Begin WebPage WebPage1
       LockVertical    =   False
       Scope           =   0
       TabIndex        =   6
-      TabStop         =   True
       Tooltip         =   ""
-      Top             =   101
+      Top             =   346
       Visible         =   True
       Width           =   364
    End
@@ -221,7 +210,6 @@ Begin WebPage WebPage1
       Multiline       =   True
       Scope           =   0
       TabIndex        =   7
-      TabStop         =   True
       TextAlignment   =   "0"
       TextColor       =   &c00000000
       Tooltip         =   ""
@@ -239,9 +227,9 @@ Begin WebPage WebPage1
       FontSize        =   0.0
       Height          =   272
       Index           =   -2147483648
-      indicator       =   "0"
+      Indicator       =   "0"
       Italic          =   False
-      Left            =   20
+      Left            =   403
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -250,14 +238,12 @@ Begin WebPage WebPage1
       LockTop         =   True
       LockVertical    =   False
       Multiline       =   True
-      PanelIndex      =   "0"
       Scope           =   0
       TabIndex        =   7
-      TabStop         =   True
       TextAlignment   =   "0"
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   271
+      Top             =   66
       Underline       =   False
       Value           =   "Adding also the style name as CSS classes to the element so you can style your Controls with own CSS properties.\n\nLook in the App.HTMLheader property to see which styles-informations come from CSS and which from Xojo.\n\nUnfortunately this is just a hack with JS and CSS and the styles doesn't apply to the LayoutEditor at design time."
       Visible         =   True
@@ -271,9 +257,9 @@ Begin WebPage WebPage1
       FontSize        =   0.0
       Height          =   38
       Index           =   -2147483648
-      indicator       =   "0"
+      Indicator       =   "0"
       Italic          =   False
-      Left            =   20
+      Left            =   403
       LockBottom      =   False
       LockedInPosition=   False
       LockHorizontal  =   False
@@ -282,14 +268,12 @@ Begin WebPage WebPage1
       LockTop         =   True
       LockVertical    =   False
       Multiline       =   False
-      PanelIndex      =   "0"
       Scope           =   0
       TabIndex        =   7
-      TabStop         =   True
       TextAlignment   =   "0"
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   225
+      Top             =   20
       Underline       =   False
       Value           =   "Way 2 - the improved? way:"
       Visible         =   True
@@ -303,7 +287,7 @@ Begin WebPage WebPage1
       FontSize        =   0.0
       Height          =   38
       Index           =   -2147483648
-      indicator       =   "0"
+      Indicator       =   "0"
       Italic          =   False
       Left            =   20
       LockBottom      =   False
@@ -314,16 +298,39 @@ Begin WebPage WebPage1
       LockTop         =   True
       LockVertical    =   False
       Multiline       =   False
-      PanelIndex      =   "0"
       Scope           =   0
       TabIndex        =   7
-      TabStop         =   True
       TextAlignment   =   "0"
       TextColor       =   &c00000000
       Tooltip         =   ""
       Top             =   20
       Underline       =   False
       Value           =   "Way 1 - the Xojo Way:"
+      Visible         =   True
+      Width           =   364
+   End
+   Begin WebCheckbox Checkbox1
+      Caption         =   "Run into the current Xojo Bug"
+      ControlID       =   ""
+      Enabled         =   True
+      Height          =   34
+      Indeterminate   =   False
+      Index           =   -2147483648
+      Indicator       =   ""
+      Left            =   217
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      LockVertical    =   False
+      Scope           =   0
+      TabIndex        =   8
+      TabStop         =   True
+      Tooltip         =   ""
+      Top             =   534
+      Value           =   False
       Visible         =   True
       Width           =   364
    End
@@ -375,6 +382,13 @@ End
 		  a.BorderThickness = 10
 		  
 		  self.TextArea1.Style = a
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events Checkbox1
+	#tag Event
+		Sub ValueChanged()
+		  app.runIntoTheXojoBug = me.Value
 		End Sub
 	#tag EndEvent
 #tag EndEvents
