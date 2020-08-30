@@ -1,5 +1,7 @@
 # Xojo Web 2.0 Style Converter
  Brings back a way to add Styles to Controls and access them over CSS in the Frontend
+ 
+![Screencast]( https://github.com/StadtLandNetz/Xojo-Web-2.0-Style-Converter/blob/master/Screenshot.gif "Screencast to show how the classes are applied")
 
 ## usage
 1) add your CSS class and some styling properties to the App.HTMLheader property
