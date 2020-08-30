@@ -53,20 +53,26 @@ Inherits WebStyle
 		  // can interfere if you apply multiple styles. I you do so, better only use CSS classes and no styling-code in Xojo
 		  
 		  
-		  
-		  self.Control.Style.BackgroundColor = self.resetStyleInformations.Lookup("BackgroundColor", nil)
-		  self.Control.Style.Bold = self.resetStyleInformations.Lookup("Bold", false)
-		  self.Control.Style.BorderColor = self.resetStyleInformations.Lookup("BorderColor", nil)
-		  self.Control.Style.BorderThickness = self.resetStyleInformations.Lookup("BorderThickness", 1)
-		  self.Control.Style.Cursor = self.resetStyleInformations.Lookup("Cursor", nil)
-		  self.Control.Style.FontName = self.resetStyleInformations.Lookup("FontName", "")
-		  self.Control.Style.FontSize = self.resetStyleInformations.Lookup("FontSize", 12)
-		  self.Control.Style.ForegroundColor = self.resetStyleInformations.Lookup("ForegroundColor", nil)
-		  self.Control.Style.Italic = self.resetStyleInformations.Lookup("Italic", false)
-		  self.Control.Style.Opacity = self.resetStyleInformations.Lookup("Opacity", 1)
-		  self.Control.Style.Strikethrough = self.resetStyleInformations.Lookup("Strikethrough", false)
-		  self.Control.Style.Underline = self.resetStyleInformations.Lookup("Underline", false)
-		  
+		  try
+		    // same bug here as in applyStyleCode()
+		    // so sad
+		    
+		    self.Control.Style.BackgroundColor = self.resetStyleInformations.Lookup("BackgroundColor", nil)
+		    self.Control.Style.Bold = self.resetStyleInformations.Lookup("Bold", false)
+		    self.Control.Style.BorderColor = self.resetStyleInformations.Lookup("BorderColor", nil)
+		    self.Control.Style.BorderThickness = self.resetStyleInformations.Lookup("BorderThickness", 1)
+		    self.Control.Style.Cursor = self.resetStyleInformations.Lookup("Cursor", nil)
+		    self.Control.Style.FontName = self.resetStyleInformations.Lookup("FontName", "")
+		    self.Control.Style.FontSize = self.resetStyleInformations.Lookup("FontSize", 12)
+		    self.Control.Style.ForegroundColor = self.resetStyleInformations.Lookup("ForegroundColor", nil)
+		    self.Control.Style.Italic = self.resetStyleInformations.Lookup("Italic", false)
+		    self.Control.Style.Opacity = self.resetStyleInformations.Lookup("Opacity", 1)
+		    self.Control.Style.Strikethrough = self.resetStyleInformations.Lookup("Strikethrough", false)
+		    self.Control.Style.Underline = self.resetStyleInformations.Lookup("Underline", false)
+		    
+		  catch err as NilObjectException
+		    System.Log(1, "Buggy Xojo Shit again")
+		  end try
 		End Sub
 	#tag EndMethod
 
