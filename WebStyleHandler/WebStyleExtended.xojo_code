@@ -8,34 +8,31 @@ Inherits WebStyle
 		  // use this only in a subclass
 		  // you can use the "control" property to access the control you applied to this style
 		  
-		  if app.runIntoTheXojoBug then
-		    try
-		      // here's a Xojo bug:
-		      //   I cannot access the Style properties, even though the self.control is not nil and totally accessable
-		      //   If you access these properties directly over the control, for examle in the "applyWebstyle" Method
-		      //   then it works fine. 
-		      //   But not here.
-		      //   Grmbl
-		      //   or am I wrong?
-		      
-		      self.resetStyleInformations.Value("BackgroundColor") = self.Control.Style.BackgroundColor
-		      self.resetStyleInformations.Value("Bold") = self.Control.Style.Bold
-		      self.resetStyleInformations.Value("BorderColor") = self.Control.Style.BorderColor
-		      self.resetStyleInformations.Value("BorderThickness") = self.Control.Style.BorderThickness
-		      self.resetStyleInformations.Value("Cursor") = self.Control.Style.Cursor
-		      self.resetStyleInformations.Value("FontName") = self.Control.Style.FontName
-		      self.resetStyleInformations.Value("FontSize") = self.Control.Style.FontSize
-		      self.resetStyleInformations.Value("ForegroundColor") = self.Control.Style.ForegroundColor
-		      self.resetStyleInformations.Value("Italic") = self.Control.Style.Italic
-		      self.resetStyleInformations.Value("Opacity") = self.Control.Style.Opacity
-		      self.resetStyleInformations.Value("Strikethrough") = self.Control.Style.Strikethrough
-		      self.resetStyleInformations.Value("Underline") = self.Control.Style.Underline
-		      
-		      
-		    catch err as NilObjectException
-		      System.Log(1, "Buggy Xojo Shit")
-		    end try
-		  end if
+		  self.resetStyleInformations.Value("Bold") = self.Control.Style.Bold
+		  self.resetStyleInformations.Value("BorderColor") = self.Control.Style.BorderColor
+		  self.resetStyleInformations.Value("BorderThickness") = self.Control.Style.BorderThickness
+		  self.resetStyleInformations.Value("Cursor") = self.Control.Style.Cursor
+		  self.resetStyleInformations.Value("FontSize") = self.Control.Style.FontSize
+		  self.resetStyleInformations.Value("Italic") = self.Control.Style.Italic
+		  self.resetStyleInformations.Value("Strikethrough") = self.Control.Style.Strikethrough
+		  self.resetStyleInformations.Value("Underline") = self.Control.Style.Underline
+		  
+		  
+		  // things with bugs
+		  self.resetStyleInformations.Value("FontName") = self.Control.Style.FontName
+		  self.resetStyleInformations.Value("ForegroundColor") = self.Control.Style.ForegroundColor
+		  self.resetStyleInformations.Value("BackgroundColor") = self.Control.Style.BackgroundColor
+		  //self.resetStyleInformations.Value("Opacity") = self.Control.Style.Opacity
+		End Sub
+	#tag EndMethod
+
+	#tag Method, Flags = &h0
+		Sub Constructor()
+		  // Calling the overridden superclass constructor.
+		  Super.Constructor
+		  
+		  var dict as new Dictionary
+		  self.resetStyleInformations = dict
 		End Sub
 	#tag EndMethod
 
@@ -53,28 +50,21 @@ Inherits WebStyle
 		  // it resets the style to its state how it was before the style was applied
 		  // can interfere if you apply multiple styles. I you do so, better only use CSS classes and no styling-code in Xojo
 		  
-		  if app.runIntoTheXojoBug then
-		    try
-		      // same bug here as in applyStyleCode()
-		      // so sad
-		      
-		      self.Control.Style.BackgroundColor = self.resetStyleInformations.Lookup("BackgroundColor", nil)
-		      self.Control.Style.Bold = self.resetStyleInformations.Lookup("Bold", false)
-		      self.Control.Style.BorderColor = self.resetStyleInformations.Lookup("BorderColor", nil)
-		      self.Control.Style.BorderThickness = self.resetStyleInformations.Lookup("BorderThickness", 1)
-		      self.Control.Style.Cursor = self.resetStyleInformations.Lookup("Cursor", nil)
-		      self.Control.Style.FontName = self.resetStyleInformations.Lookup("FontName", "")
-		      self.Control.Style.FontSize = self.resetStyleInformations.Lookup("FontSize", 12)
-		      self.Control.Style.ForegroundColor = self.resetStyleInformations.Lookup("ForegroundColor", nil)
-		      self.Control.Style.Italic = self.resetStyleInformations.Lookup("Italic", false)
-		      self.Control.Style.Opacity = self.resetStyleInformations.Lookup("Opacity", 1)
-		      self.Control.Style.Strikethrough = self.resetStyleInformations.Lookup("Strikethrough", false)
-		      self.Control.Style.Underline = self.resetStyleInformations.Lookup("Underline", false)
-		      
-		    catch err as NilObjectException
-		      System.Log(1, "Buggy Xojo Shit again")
-		    end try
-		  end if
+		  
+		  self.Control.Style.Bold = self.resetStyleInformations.Value("Bold").BooleanValue
+		  self.Control.Style.BorderColor = self.resetStyleInformations.Value("BorderColor").ColorValue
+		  self.Control.Style.BorderThickness = self.resetStyleInformations.Value("BorderThickness").IntegerValue
+		  self.Control.Style.Cursor = self.resetStyleInformations.Value("Cursor")
+		  self.Control.Style.FontSize = self.resetStyleInformations.Value("FontSize").IntegerValue
+		  self.Control.Style.ForegroundColor = self.resetStyleInformations.Value("ForegroundColor").ColorValue
+		  self.Control.Style.Italic = self.resetStyleInformations.Value("Italic").BooleanValue
+		  self.Control.Style.Strikethrough = self.resetStyleInformations.Value("Strikethrough").BooleanValue
+		  self.Control.Style.Underline = self.resetStyleInformations.Value("Underline").BooleanValue
+		  
+		  // things with bugs
+		  self.Control.Style.BackgroundColor = self.resetStyleInformations.Value("BackgroundColor").ColorValue // here's a bug - it it doesn't reset the color properly
+		  self.Control.Style.FontName = replace(self.resetStyleInformations.Value("FontName").StringValue, "-Neue", "") // here's a bug when you use Helvetica, it doesn't reset the font properly
+		  //self.Control.Style.Opacity = self.resetStyleInformations.Lookup("Opacity", 1)
 		End Sub
 	#tag EndMethod
 

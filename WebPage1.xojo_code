@@ -309,31 +309,6 @@ Begin WebPage WebPage1
       Visible         =   True
       Width           =   364
    End
-   Begin WebCheckbox Checkbox1
-      Caption         =   "Run into the current Xojo Bug"
-      ControlID       =   ""
-      Enabled         =   True
-      Height          =   34
-      Indeterminate   =   False
-      Index           =   -2147483648
-      Indicator       =   ""
-      Left            =   217
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockHorizontal  =   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      LockVertical    =   False
-      Scope           =   0
-      TabIndex        =   8
-      TabStop         =   True
-      Tooltip         =   ""
-      Top             =   534
-      Value           =   False
-      Visible         =   True
-      Width           =   364
-   End
 End
 #tag EndWebPage
 
@@ -382,13 +357,6 @@ End
 		  a.BorderThickness = 10
 		  
 		  self.TextArea1.Style = a
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events Checkbox1
-	#tag Event
-		Sub ValueChanged()
-		  app.runIntoTheXojoBug = me.Value
 		End Sub
 	#tag EndEvent
 #tag EndEvents
