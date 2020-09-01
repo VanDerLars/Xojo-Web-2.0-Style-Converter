@@ -11,9 +11,8 @@
 
 
 ## known bugs
-- actually, I wanted also to handle the style-code you can enter over the new style API like "control.style.backgroundcolor = {color}"
-- unfortunately, there's a bug (I assume), so this doesn't work yet
-
+- ~~actually, I wanted also to handle the style-code you can enter over the new style API like "control.style.backgroundcolor = {color}". unfortunately, there's a bug (I assume), so this doesn't work yet~~
+- Xojo seems to handle some style-informations not right. FontName, BackgroundColor, Opacity and such are not the right values when I save them into a dictionary and restore them
 
 ## on my list
 - [ ] write a converter, which converts old Web 1 webstyles to CSS and the new WebstyleExtended class.
