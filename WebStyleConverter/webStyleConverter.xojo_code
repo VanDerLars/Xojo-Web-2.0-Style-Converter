@@ -165,14 +165,14 @@ Protected Class webStyleConverter
 
 	#tag Method, Flags = &h21
 		Private Sub turn_border_bottom(value as string)
-		  // border-top=10px solid 652536FF
+		  // border-bottom=10px solid 652536FF
 		  // ->
-		  // border-top:10px solid #652536FF
+		  // border-bottom:10px solid #652536FF
 		  
 		  var spl() as string = value.Split(" ")
 		  var newVal as String = spl(0) + " " + spl(1) + " #" + spl(2)
 		  
-		  self.newStyleValues.Value("border-top") = newVal
+		  self.newStyleValues.Value("border-bottom") = newVal
 		End Sub
 	#tag EndMethod
 
@@ -257,11 +257,13 @@ Protected Class webStyleConverter
 
 	#tag Method, Flags = &h21
 		Private Sub turn_misc_background(value as string)
-		  // corner-topright=25px
+		  // misc-background=solid FFFFFFFF
 		  // ->
-		  // border-top-right-radius: 25px;
+		  // background-color: #FFFFFFFF;
 		  
-		  self.newStyleValues.Value("border-top-right-radius") = value
+		  var spl() as string = value.Split(" ")
+		  
+		  self.newStyleValues.Value("background-color") = "#" + spl(1)
 		End Sub
 	#tag EndMethod
 

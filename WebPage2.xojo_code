@@ -47,7 +47,7 @@ Begin WebPage WebPage2
       LockVertical    =   False
       PanelCount      =   2
       Scope           =   2
-      SelectedPanelIndex=   2
+      SelectedPanelIndex=   0
       TabDefinition   =   "Import\rOptions\rConvert"
       TabIndex        =   5
       Tooltip         =   ""
@@ -271,6 +271,42 @@ Begin WebPage WebPage2
          Visible         =   True
          Width           =   100
       End
+      Begin WebListBox ListBox1
+         ColumnCount     =   1
+         ColumnWidths    =   ""
+         ControlID       =   ""
+         Enabled         =   True
+         HasHeader       =   False
+         Height          =   321
+         HighlightSortedColumn=   True
+         Index           =   -2147483648
+         Indicator       =   ""
+         InitialValue    =   ""
+         LastAddedRowIndex=   0
+         Left            =   486
+         LockBottom      =   True
+         LockedInPosition=   False
+         LockHorizontal  =   False
+         LockLeft        =   True
+         LockRight       =   True
+         LockTop         =   True
+         LockVertical    =   False
+         NoRowsMessage   =   ""
+         PanelIndex      =   "0"
+         Parent          =   "TabPanel1"
+         RowCount        =   0
+         RowSelectionType=   "1"
+         Scope           =   2
+         SearchCriteria  =   ""
+         SelectedRowColor=   &c0272D300
+         SelectedRowIndex=   0
+         TabIndex        =   8
+         TabStop         =   True
+         Tooltip         =   ""
+         Top             =   126
+         Visible         =   True
+         Width           =   400
+      End
    End
    Begin WebToolbar Toolbar1
       ControlID       =   ""
@@ -295,40 +331,6 @@ Begin WebPage WebPage2
       Top             =   0
       Visible         =   True
       Width           =   926
-   End
-   Begin WebListBox ListBox1
-      ColumnCount     =   1
-      ColumnWidths    =   ""
-      ControlID       =   ""
-      Enabled         =   True
-      HasHeader       =   False
-      Height          =   321
-      HighlightSortedColumn=   True
-      Index           =   -2147483648
-      Indicator       =   ""
-      InitialValue    =   ""
-      LastAddedRowIndex=   0
-      Left            =   485
-      LockBottom      =   True
-      LockedInPosition=   False
-      LockHorizontal  =   False
-      LockLeft        =   True
-      LockRight       =   True
-      LockTop         =   True
-      LockVertical    =   False
-      NoRowsMessage   =   ""
-      RowCount        =   0
-      RowSelectionType=   "1"
-      Scope           =   2
-      SearchCriteria  =   ""
-      SelectedRowColor=   &c0272D300
-      SelectedRowIndex=   0
-      TabIndex        =   10
-      TabStop         =   True
-      Tooltip         =   ""
-      Top             =   122
-      Visible         =   True
-      Width           =   400
    End
 End
 #tag EndWebPage
