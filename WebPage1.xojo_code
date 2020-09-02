@@ -52,17 +52,15 @@ Begin WebPage WebPage1
       TabIndex        =   1
       TextAlignment   =   "0"
       Tooltip         =   ""
-      Top             =   453
+      Top             =   573
       Value           =   "This is an example Text to show you how a style is applied and removed."
       Visible         =   True
       Width           =   364
    End
    Begin WebStyleHandler WebStyleHandler1
       Index           =   -2147483648
-      Left            =   0.0
       LockedInPosition=   False
       Scope           =   0
-      Top             =   0.0
    End
    Begin WebButton Button1
       AllowAutoDisable=   False
@@ -85,7 +83,7 @@ Begin WebPage WebPage1
       Scope           =   0
       TabIndex        =   5
       Tooltip         =   ""
-      Top             =   346
+      Top             =   466
       Visible         =   True
       Width           =   178
    End
@@ -110,7 +108,7 @@ Begin WebPage WebPage1
       Scope           =   0
       TabIndex        =   5
       Tooltip         =   ""
-      Top             =   346
+      Top             =   466
       Visible         =   True
       Width           =   178
    End
@@ -135,7 +133,7 @@ Begin WebPage WebPage1
       Scope           =   0
       TabIndex        =   5
       Tooltip         =   ""
-      Top             =   392
+      Top             =   512
       Visible         =   True
       Width           =   178
    End
@@ -160,7 +158,7 @@ Begin WebPage WebPage1
       Scope           =   0
       TabIndex        =   5
       Tooltip         =   ""
-      Top             =   392
+      Top             =   512
       Visible         =   True
       Width           =   178
    End
@@ -185,7 +183,7 @@ Begin WebPage WebPage1
       Scope           =   0
       TabIndex        =   6
       Tooltip         =   ""
-      Top             =   346
+      Top             =   466
       Visible         =   True
       Width           =   364
    End
@@ -213,7 +211,7 @@ Begin WebPage WebPage1
       TextAlignment   =   "0"
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   66
+      Top             =   186
       Underline       =   False
       Value           =   "Only adding style properties to an element without the style name as it was in Xojo WebEdition 1.0\n\nBad for those who added own CSS styles to controls."
       Visible         =   True
@@ -243,7 +241,7 @@ Begin WebPage WebPage1
       TextAlignment   =   "0"
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   66
+      Top             =   186
       Underline       =   False
       Value           =   "Adding also the style name as CSS classes to the element so you can style your Controls with own CSS properties.\n\nLook in the App.HTMLheader property to see which styles-informations come from CSS and which from Xojo.\n\nUnfortunately this is just a hack with JS and CSS and the styles doesn't apply to the LayoutEditor at design time."
       Visible         =   True
@@ -273,7 +271,7 @@ Begin WebPage WebPage1
       TextAlignment   =   "0"
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   20
+      Top             =   140
       Underline       =   False
       Value           =   "Way 2 - the improved? way:"
       Visible         =   True
@@ -303,11 +301,35 @@ Begin WebPage WebPage1
       TextAlignment   =   "0"
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   20
+      Top             =   140
       Underline       =   False
       Value           =   "Way 1 - the Xojo Way:"
       Visible         =   True
       Width           =   364
+   End
+   Begin WebToolbar Toolbar1
+      ControlID       =   ""
+      Enabled         =   True
+      FullWidth       =   True
+      Height          =   56
+      Index           =   -2147483648
+      Indicator       =   "0"
+      Left            =   0
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   False
+      LockLeft        =   True
+      LockRight       =   True
+      LockTop         =   True
+      LockVertical    =   False
+      Position        =   "1"
+      Scope           =   0
+      TabIndex        =   8
+      Title           =   ""
+      Tooltip         =   ""
+      Top             =   0
+      Visible         =   True
+      Width           =   832
    End
 End
 #tag EndWebPage
@@ -357,6 +379,35 @@ End
 		  a.BorderThickness = 10
 		  
 		  self.TextArea1.Style = a
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events Toolbar1
+	#tag Event
+		Sub Opening()
+		  var a as new WebToolbarButton
+		  a.Caption = "Test Panel"
+		  a.Badge = "?"
+		  a.Tag = 0
+		  var b as new WebToolbarButton
+		  b.Caption = "Converter"
+		  b.Badge = "!"
+		  b.Tag = 1
+		  
+		  me.AddItem(a)
+		  me.AddItem(b)
+		  
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Pressed(Item as WebToolbarButton)
+		  select case item.Tag
+		  case 0
+		    WebPage1.Show
+		  case 1
+		    WebPage2.Show
+		    
+		  end select
 		End Sub
 	#tag EndEvent
 #tag EndEvents
