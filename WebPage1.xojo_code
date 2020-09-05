@@ -1,10 +1,10 @@
 #tag WebPage
-Begin WebPage WebPage1
+Begin WebPageExtended WebPage1
    AllowTabOrderWrap=   True
    Compatibility   =   ""
    ControlID       =   ""
    Enabled         =   False
-   Height          =   740
+   Height          =   666
    ImplicitInstance=   True
    Index           =   -2147483648
    Indicator       =   "0"
@@ -38,11 +38,11 @@ Begin WebPage WebPage1
       Hint            =   ""
       Index           =   -2147483648
       Indicator       =   ""
-      Left            =   217
+      Left            =   234
       LockBottom      =   False
       LockedInPosition=   False
-      LockHorizontal  =   False
-      LockLeft        =   True
+      LockHorizontal  =   True
+      LockLeft        =   False
       LockRight       =   False
       LockTop         =   True
       LockVertical    =   False
@@ -52,15 +52,17 @@ Begin WebPage WebPage1
       TabIndex        =   1
       TextAlignment   =   "0"
       Tooltip         =   ""
-      Top             =   573
+      Top             =   499
       Value           =   "This is an example Text to show you how a style is applied and removed."
       Visible         =   True
       Width           =   364
    End
    Begin WebStyleHandler WebStyleHandler1
       Index           =   -2147483648
+      Left            =   0.0
       LockedInPosition=   False
       Scope           =   0
+      Top             =   -37.0
    End
    Begin WebButton Button1
       AllowAutoDisable=   False
@@ -83,7 +85,7 @@ Begin WebPage WebPage1
       Scope           =   0
       TabIndex        =   5
       Tooltip         =   ""
-      Top             =   466
+      Top             =   390
       Visible         =   True
       Width           =   178
    End
@@ -108,7 +110,7 @@ Begin WebPage WebPage1
       Scope           =   0
       TabIndex        =   5
       Tooltip         =   ""
-      Top             =   466
+      Top             =   390
       Visible         =   True
       Width           =   178
    End
@@ -133,7 +135,7 @@ Begin WebPage WebPage1
       Scope           =   0
       TabIndex        =   5
       Tooltip         =   ""
-      Top             =   512
+      Top             =   436
       Visible         =   True
       Width           =   178
    End
@@ -158,7 +160,7 @@ Begin WebPage WebPage1
       Scope           =   0
       TabIndex        =   5
       Tooltip         =   ""
-      Top             =   512
+      Top             =   436
       Visible         =   True
       Width           =   178
    End
@@ -183,7 +185,7 @@ Begin WebPage WebPage1
       Scope           =   0
       TabIndex        =   6
       Tooltip         =   ""
-      Top             =   466
+      Top             =   390
       Visible         =   True
       Width           =   364
    End
@@ -211,7 +213,7 @@ Begin WebPage WebPage1
       TextAlignment   =   "0"
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   186
+      Top             =   110
       Underline       =   False
       Value           =   "Only adding style properties to an element without the style name as it was in Xojo WebEdition 1.0\n\nBad for those who added own CSS styles to controls."
       Visible         =   True
@@ -241,7 +243,7 @@ Begin WebPage WebPage1
       TextAlignment   =   "0"
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   186
+      Top             =   110
       Underline       =   False
       Value           =   "Adding also the style name as CSS classes to the element so you can style your Controls with own CSS properties.\n\nLook in the App.HTMLheader property to see which styles-informations come from CSS and which from Xojo.\n\nUnfortunately this is just a hack with JS and CSS and the styles doesn't apply to the LayoutEditor at design time."
       Visible         =   True
@@ -271,7 +273,7 @@ Begin WebPage WebPage1
       TextAlignment   =   "0"
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   140
+      Top             =   64
       Underline       =   False
       Value           =   "Way 2 - the improved? way:"
       Visible         =   True
@@ -301,7 +303,7 @@ Begin WebPage WebPage1
       TextAlignment   =   "0"
       TextColor       =   &c00000000
       Tooltip         =   ""
-      Top             =   140
+      Top             =   64
       Underline       =   False
       Value           =   "Way 1 - the Xojo Way:"
       Visible         =   True
@@ -330,6 +332,33 @@ Begin WebPage WebPage1
       Top             =   0
       Visible         =   True
       Width           =   832
+   End
+   Begin WebButton Button6
+      AllowAutoDisable=   False
+      Cancel          =   False
+      Caption         =   "Apply Style to Webpage"
+      ControlID       =   ""
+      Default         =   True
+      Enabled         =   True
+      Height          =   38
+      Index           =   -2147483648
+      Indicator       =   "6"
+      Left            =   271
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockHorizontal  =   True
+      LockLeft        =   False
+      LockRight       =   False
+      LockTop         =   True
+      LockVertical    =   False
+      PanelIndex      =   "0"
+      Scope           =   0
+      TabIndex        =   5
+      TabStop         =   True
+      Tooltip         =   ""
+      Top             =   608
+      Visible         =   True
+      Width           =   291
    End
 End
 #tag EndWebPage
@@ -408,6 +437,13 @@ End
 		    WebPage2.Show
 		    
 		  end select
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events Button6
+	#tag Event
+		Sub Pressed()
+		  self.WebStyle = new pageStyle
 		End Sub
 	#tag EndEvent
 #tag EndEvents

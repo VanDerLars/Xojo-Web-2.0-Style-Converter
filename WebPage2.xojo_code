@@ -301,6 +301,7 @@ Begin WebPage WebPage2
          SelectedRowColor=   &c0272D300
          SelectedRowIndex=   0
          TabIndex        =   8
+         TabPanelIndex   =   0
          TabStop         =   True
          Tooltip         =   ""
          Top             =   126

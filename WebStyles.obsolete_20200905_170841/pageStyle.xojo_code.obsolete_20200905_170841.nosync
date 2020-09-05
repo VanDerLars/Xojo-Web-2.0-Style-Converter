@@ -1,5 +1,5 @@
 #tag Class
-Protected Class redText
+Protected Class pageStyle
 Inherits WebStyleExtended
 	#tag Method, Flags = &h0
 		Sub ApplyStyleCode()
@@ -10,11 +10,6 @@ Inherits WebStyleExtended
 		  
 		End Sub
 	#tag EndMethod
-
-
-	#tag Property, Flags = &h0
-		name As string = "redtext"
-	#tag EndProperty
 
 
 	#tag ViewBehavior
